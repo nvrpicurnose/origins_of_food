@@ -1,0 +1,6 @@
+<h2>Delete Documentation</h2>
+
+<%= form_for(:food, :url=>{:action=>'delete', :id=>@food.id}) do |f| %>
+	<p>Are you sure you want to delete the <%= @food.name %>?</p>
+	<%= submit_tag("Delete") %>
+<% end %>

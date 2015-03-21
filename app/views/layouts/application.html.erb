@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Origins</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class='navbar'>
+	<div style='text-align:center;'><h1 style='color:#E6B800; text-shadow: -2px 0 #470047, 0 2px #470047, 2px 0 #470047, 0 -2px #470047; font-family: "Times New Roman", Times, serif; font-size:40px; margin-top:20px;'>The Origin of Foods</h1><div style='background-color:black; width: 180px; margin-left: 250px;'><h4 style='color:#E6B800; text-shadow: -2px 0 #470047, 0 2px #470047, 2px 0 #470047, 0 -2px #470047; font-family: "Times New Roman", Times, serif; font-size:40px; margin-top:-11px; font-size:16px;'>Animated Time-Maps</h4></div></div>
+</div>
+
+<div id='basket'>
+	<div class='button'><p style='margin-left: 10px; margin-top: -3px; font-size: 36px;text-shadow: -2px 0 #E6B800, 0 2px #E6B800, 2px 0 #E6B800, 0 -2px #E6B800;'><%= link_to "Basket", foods_path, {:style=>'color:black; text-decoration:none; font-weight: bold;', :class=>'css_class'} %></p></div>
+</div>
+
+<div id='random'>
+	<div class='button'><p style='margin-left: -8px; margin-top: -2px; font-size: 36px;text-shadow: -2px 0 #E6B800, 0 2px #E6B800, 2px 0 #E6B800, 0 -2px #E6B800; font-weight: bold;'><%= link_to "Random", food_path(:id=>@random.id), {:style=>'color:black; text-decoration:none;', :class=>'css_class'} %></p></div>
+</div>
+
+<%= yield %>
+
+</body>
+</html>
+

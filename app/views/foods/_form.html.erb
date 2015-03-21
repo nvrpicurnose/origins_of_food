@@ -1,0 +1,48 @@
+
+
+<div>
+	<%= f.label(:name, "Common Name") %><br />
+	<%= f.text_field(:name, :placeholder=>"eg. Apple") %><br /><br />
+
+	<%= f.label(:sciname, "Scientific Name") %><br />
+	<%= f.text_field(:sciname, :placeholder=>"eg. Malus domestica") %><br /><br />
+
+	<%= f.label(:origin, "Place of Origin") %><br />
+	<%= f.text_field(:origin, :placeholder=>"eg. Kazahkstan") %><br /><br />
+
+	<%= f.label(:description, "Description") %><br />
+	<%= f.text_area(:description, :placeholder=>"Under 730 characters") %><br /><br />
+
+	<%= f.label(:years, "Years (seperated by comma") %><br />
+	<%= f.text_field(:years, :placeholder=>"eg. 2000 BCE, 500 BCE, 1200 CE, 1800CE, 2000 CE") %><br /><br />
+
+	<%= f.label(:icon1, "Image Icon") %><br />
+	<%= f.file_field :icon1 %></br /><br />
+
+	<%= f.label(:classification, "Classification (<620px") %><br />
+	<%= f.file_field(:classification) %><br /><br />
+
+	<%= f.label(:map1, "Year 1") %><br />
+	<%= f.file_field :map1 %><br /><br />
+
+	<%= f.label(:map2, "Year 2") %><br />
+	<%= f.file_field :map2 %><br /><br />
+
+	<%= f.label(:map3, "Year 3") %><br />
+	<%= f.file_field :map3 %><br /><br />
+
+	<%= f.label(:map4, "Year 4") %><br />
+	<%= f.file_field :map4 %><br /><br />
+
+	<%= f.label(:map5, "Year 5") %><br />
+	<%= f.file_field :map5 %><br /><br />
+
+	<%= f.label(:back1, "Background Image (1125x750px or more") %><br />
+	<%= f.file_field :back1 %><br /><br />
+
+	<%= f.label(:source, "Info Source") %><br />
+	<%= f.text_area(:source, :placeholder=>"eg. www.wikipedia.com/fruit/apple/")  %><br /><br />
+
+	<%= submit_tag("Update") %>
+</div>
+

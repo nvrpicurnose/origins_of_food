@@ -1,0 +1,49 @@
+<head></head>
+
+<body>
+
+<div class='.body'>
+	<div class='heading'>
+			<div class='headinginfo'>
+				<h2 style='float:left;'><%= @food.name %></h2>
+				<p style= 'float: left; margin-top:47px; font-size: 16px; margin-left:15px;'><%= @food.sciname %><br />
+				Origin: <%= @food.origin %><br />
+			</div>
+	</div>
+
+	<div style='width: 110px; margin-top:20px; margin-left: 1020px;height:100px; width:100px; position: absolute;'>
+		<%= image_tag @food.icon1(:thumb) %>
+	</div>
+
+	<div class='classification'>
+		<%= image_tag @food.classification %>
+	</div>
+
+	<div class='info'>
+		<div class='map5'><%= image_tag @food.map5.url %></div>
+		<div class='time1'><h1><%= @years[4] %></h1></div>
+
+		<div class='map4'><%= image_tag @food.map4.url %></div>
+		<div class='time2'><h1><%= @years[3] %></h1></div>
+
+		<div class='map3'><%= image_tag @food.map3.url %></div>
+		<div class='time3'><h1><%= @years[2] %></h1></div>
+
+		<div class='map2'><%= image_tag @food.map2.url %></div>
+		<div class='time4'><h1><%= @years[1] %></h1></div>
+
+		<div class='map1'><%= image_tag @food.map1.url %></div>
+		<div class='time5'><h1><%= @years[0] %></h1></div>
+
+		<div class='description'><%= @food.description %></div>
+	</div>
+
+	<div class='back1'>
+		<img style="height:auto; max-width:1200px; min-width:1200px; z-index:-1;" src="<%= @food.back1.url %>">
+	</div>
+</div>
+
+<%= link_to "Edit", edit_food_path(:id=>@food.id) %>
+<%= link_to("Delete", {:id=>@food.id, :action=>'delete'}) %>
+
+</body>
